@@ -9,14 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "bootstrap": "^5.1.0",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
+    "generate-password": "^1.7.0",
     "next": "13.0.3",
     "react": "18.2.0",
+    "react-bootstrap": "^2.5.0-beta.1",
     "react-dom": "18.2.0",
+    "recoil": "^0.7.6",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "@radix-ui/react-icons": "^1.1.1",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "react-icons": "^4.6.0",
+    "tailwindcss": "^3.2.4"
   }
 }
