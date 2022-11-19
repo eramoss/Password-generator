@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import Appcontext from "../context/AppContext"
 
-export const InpuComponent = () => {
+export function InpuComponent() {
 
   const {rangeValue, changeRange} = useContext(Appcontext)
 

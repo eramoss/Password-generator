@@ -6,6 +6,8 @@ import { StrengthPass } from "../components/StrengthPass";
 import { useContext, useState } from "react";
 import { InpuComponent } from "../components/InputComponent";
 import Appcontext from "../context/AppContext";
+import { ModalCopy } from "../components/ModalCopy";
+
 
 
 
@@ -16,16 +18,15 @@ export default function Home() {
   const {error,CheckLower,CheckNumber,CheckSymbol,CheckUpper } = useContext(Appcontext)
 
 
-
-  const [rangeValue, setRangeValue] = useState('0')
-
-
-
-
-  
-
   return (
     <div className='flex justify-center items-center w-screen h-screen bg-slate-900 font-bold'>
+     
+      <div className="  fixed -right-36 top-4 ">
+        <ModalCopy/>
+      </div>
+        
+
+      
       
       <div className="w-96 h-auto flex flex-col gap-4">
           

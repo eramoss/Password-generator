@@ -9,7 +9,6 @@ interface AppcontextData {
   changeRange(p: string): void
   PasswordState: string;
   error: string;
-  modalWindow(): void
   Upper: boolean
   Lower: boolean
   Number: boolean
@@ -18,6 +17,9 @@ interface AppcontextData {
   CheckLower(): void
   CheckNumber(): void
   CheckSymbol(): void
+  isCopied: boolean
+  apearModal: JSX.Element
+  setapearModal: React.Dispatch<React.SetStateAction<JSX.Element>>
 }
 
 
@@ -113,15 +115,16 @@ export const AppProvider: React.FC<Props> = ({children}) => {
   const [isCopied, setIsCopied] = useState(false)
  
   
+  const [apearModal, setapearModal] = useState(<></>)
 
-  const modalWindow = () => {
-    setIsCopied(true)
-  }
+  
+      
+  
 
 
 
   return(
-    <Appcontext.Provider  value={ {generate, rangeValue, changeRange, PasswordState, error, modalWindow,Lower,Number,Symbol,Upper, CheckLower,CheckNumber,CheckSymbol,CheckUpper} }>
+    <Appcontext.Provider  value={ {generate, rangeValue, changeRange, PasswordState, error,Lower,Number,Symbol,Upper, CheckLower,CheckNumber,CheckSymbol,CheckUpper, isCopied, apearModal, setapearModal} }>
       {children}
     </Appcontext.Provider>
 
