@@ -115,7 +115,7 @@ export const AppProvider: React.FC<Props> = ({children}) => {
   const [isCopied, setIsCopied] = useState(false)
  
   
-  const [apearModal, setapearModal] = useState(<></>)
+  const [apearModal, setapearModal] = useState(<div className=" bg-emerald-400 rounded  text-sm p-2 translate-x-40 transition" ><h1> password copied successfully! </h1></div>)
 
   
       
