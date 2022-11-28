@@ -5,7 +5,7 @@ This is a [Password generator] project bootstrapped with [`create-next-app`](htt
 First, install dependencies and run the development server:
 
 ```bash
-npm init
+npm install
 
 npm run dev
 ```
