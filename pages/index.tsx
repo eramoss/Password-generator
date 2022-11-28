@@ -2,7 +2,7 @@
 import { Button } from "../components/ButtonComponent";
 import {CheckboxComponent} from "../components/Checkbox";
 import { HeaderBody } from "../components/HeaderBody";
-import { StrengthPass } from "../components/StrengthPass";
+import { StrengthPass } from "../components/StrenghtComponent/StrengthPass";
 import { useContext, useState } from "react";
 import { InpuComponent } from "../components/InputComponent";
 import Appcontext from "../context/AppContext";
