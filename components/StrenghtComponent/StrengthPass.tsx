@@ -11,63 +11,33 @@ export function StrengthPass() {
   var BlockStyle3 = "block border border-white w-[6px] h-4";
   var BlockStyle4 = "block border border-white w-[6px] h-4";
 
-  if (Upper === true && Range > 5) {
-    BlockStyle1 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
+  const settingsSet = [Upper, Lower, Number, Symbol];
+  const SettingsChecked = settingsSet.filter(
+    (setting) => setting === true
+  ).length;
+
+  if (SettingsChecked >= 1 && Range >= 5)
+    BlockStyle1 = "block border border-white w-[6px] h-4 bg-red-700 ";
+
+  if (SettingsChecked >= 2 && Range >= 8) {
+    BlockStyle1 = "block border border-white w-[6px] h-4 bg-orange-700 ";
+    BlockStyle2 = "block border border-white w-[6px] h-4 bg-orange-700 ";
   }
-  if (Lower === true && Range > 5) {
-    BlockStyle1 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Number === true && Range > 5) {
-    BlockStyle1 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Symbol === true && Range > 5) {
-    BlockStyle1 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
+  if (SettingsChecked >= 3 && Range >= 12) {
+    BlockStyle1 = "block border border-white w-[6px] h-4 bg-yellow-500 ";
+    BlockStyle2 = "block border border-white w-[6px] h-4 bg-yellow-500";
+    BlockStyle3 = "block border border-white w-[6px] h-4 bg-yellow-500 ";
   }
 
-  if (Upper === true && Range > 8 && Lower === true) {
-    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Upper === true && Range > 8 && Number === true) {
-    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Upper === true && Range > 8 && Symbol === true) {
-    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Number === true && Range > 8 && Symbol === true) {
-    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Lower === true && Range > 8 && Symbol === true) {
-    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Lower === true && Range > 8 && Number === true) {
-    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-
-  if (Upper === true && Range > 12 && Lower === true && Number === true) {
-    BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Symbol === true && Range > 12 && Lower === true && Number === true) {
-    BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Upper === true && Range > 12 && Symbol === true && Number === true) {
-    BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-  if (Upper === true && Range > 12 && Symbol === true && Lower === true) {
-    BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
-  }
-
-  if (
-    Upper === true &&
-    Range > 16 &&
-    Lower === true &&
-    Number === true &&
-    Symbol === true
-  ) {
-    BlockStyle4 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
+  if (SettingsChecked >= 4 && Range >= 16) {
+    BlockStyle1 = "block border border-white w-[6px] h-4 bg-emerald-500 ";
+    BlockStyle2 = "block border border-white w-[6px] h-4 bg-emerald-500";
+    BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-500 ";
+    BlockStyle4 = "block border border-white w-[6px] h-4 bg-emerald-500 ";
   }
 
   return (
-    <div className="bg-gray-900 flex items-center justify-between p-4">
+    <div className="bg-gray-900 flex items-center justify-between p-4 ">
       <h1 className="text-gray-600">STRENGHT</h1>
 
       <div className="flex gap-1">
