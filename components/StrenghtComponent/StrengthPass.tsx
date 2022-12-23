@@ -52,6 +52,9 @@ export function StrengthPass() {
   if (Upper === true && Range > 12 && Symbol === true && Number === true) {
     BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
   }
+  if (Upper === true && Range > 12 && Symbol === true && Lower === true) {
+    BlockStyle3 = "block border border-white w-[6px] h-4 bg-emerald-400 ";
+  }
 
   if (
     Upper === true &&
